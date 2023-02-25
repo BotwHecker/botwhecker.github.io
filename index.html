@@ -4,57 +4,24 @@
 <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
 <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 <h2>Mega Charizard X</h2>
-<img src="docs/assets/img/Charizard-2.jpg" style="width:1500px;height:900px;">
+<img src="https://github.com/BotwHecker/botwhecker.github.io/blob/main/docs/assets%E2%80%8B/img/Charizard-2.jpg?raw=true" style="width:1500px;height:900px;">
 <py-env>
-  
+  - paths:
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - docs/assets/external-modules/keyboard/
+     - ./file_name.py
 </py-env>
-<py-config>
-  packages = ["keyboard"]
-</py-config>
-<py-script>
-    import keyboard
-    import os
-    import time
-    import sys
-    import math
-
-    def PrintGrid(colPos, rowPos, size):
-        os.system("clear")
-        countAfter = size - colPos - 1
-        for row in range(0, size):
-            print("🔳"*colPos , end="")
-            if row != rowPos:    
-                print("🔳", end="")
-            else: 
-                print("🟥", end="")
-            print("🔳"*countAfter)
-
-
-
-
-    #Clears The Terminal
-    os.system("clear")
-    #Sets Variables
-    XPos = 0
-    YPos = 0
-    size = 10
-    PrintGrid(XPos, YPos, size)
-    while True:
-        InputChar = keyboard.read_key()
-        if InputChar == "a":
-            XPos = XPos - 1
-        if InputChar == "d":
-            XPos = XPos + 1
-        if InputChar == "s":
-            YPos = YPos + 1
-        if InputChar == "w":
-            YPos = YPos - 1
-        XPos = XPos%size
-        YPos = YPos%size
-        PrintGrid(XPos, YPos, size)
-</py-script>
-
-
-</body>
-</html>
-
